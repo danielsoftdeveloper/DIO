@@ -11,7 +11,7 @@ function handleKeyUp(event) {
         }
     }
 }
-
+ 
 function jump() {
    
     isJumping = true;
