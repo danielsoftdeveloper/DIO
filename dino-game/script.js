@@ -19,25 +19,25 @@ function jump() {
     let upInterval = setInterval(() => {
 
         if (position >= 180) {
-            //para subida
+            //stop jumping
             clearInterval(upInterval);
 
-            //Descendo
+            //going down
             let downInterval = setInterval(() => {
                 if (position <= 0) {
                     clearInterval(downInterval);
                     isJumping = false;
 
                 } else {
-                    // controle velocidade descida    
+                    // landing   
                     position -= 10 ;
                     dino.style.bottom = position + 'px';
                 }
             }, 20);
 
         } else {
-            //subindo
-            position += 20;
+            //jump up
+            position += 50;
             dino.style.bottom = position + 'px';
         }
 
@@ -45,37 +45,43 @@ function jump() {
 
 }
 
-function createCactus() {
-    const cactus = document.createElement('div');
-    let cactusPosition = 1000;
+function createCharacter() {
+    const enimies = document.createElement('div');
+    let characterPosition = 1000;
     let randomTime = Math.random() * 6000;
-    console.log(randomTime); 
+    let persona = Math.floor(Math.random() * 10);
+    //console.log(randomTime); 
 
-    cactus.classList.add('cactus');
-    cactus.style.left = 1000 + 'px';
-    background.appendChild(cactus);
+    if(persona >= 0 && persona < 4){
+        enimies.classList.add('cactus');
+    } 
+    if (persona >= 4 ) {
+        enimies.classList.add('goomba');        
+    }
+
+    enimies.style.left = 1000 + 'px';
+    background.appendChild(enimies);
 
     let leftInterval = setInterval(() => {
 
-
-        if (cactusPosition < -60) {
+        if (characterPosition < -60) {
             clearInterval(leftInterval);
-            background.removeChild(cactus);
-        } else if(cactusPosition > 0 && cactusPosition < 60 && position < 60){
+            background.removeChild(enimies);
+        } else if(characterPosition > 0 && characterPosition < 60 && position < 60){
             // Game over se encostar no dino
             clearInterval(leftInterval);
             document.body.innerHTML = '<h1 class="game-over">Fim de Jogo</<h1>';
         } else {
-            cactusPosition -= 10;
-            cactus.style.left = cactusPosition + 'px';
+            characterPosition -= 7;
+            enimies.style.left = characterPosition + 'px';
 
         }
 
     }, 20);
 
-    setTimeout(createCactus, randomTime);
+    setTimeout(createCharacter, randomTime);
 
 }
 
-createCactus();
+createCharacter();
 document.addEventListener('keyup', handleKeyUp);

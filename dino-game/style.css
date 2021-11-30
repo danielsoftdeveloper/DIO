@@ -18,6 +18,14 @@ body {
     background-image: url(cactus.png);
 }
 
+.goomba {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    bottom: 0;
+    background-image: url(goomba.png);
+}
+
 .game-over {
     text-align: center;
     color: black;
