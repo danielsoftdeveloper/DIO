@@ -5,7 +5,7 @@ body {
 .dino{
     width:  150px;
     height: 150px;
-    background-image: url(dino.png);
+    background-image: url(/images/dino.png);
     position: absolute;
     bottom: 0;    
 }
@@ -15,15 +15,40 @@ body {
     width: 60px;
     height: 60px;
     bottom: 0;
-    background-image: url(cactus.png);
+    background-image: url(/images/cactus.png);
 }
 
 .goomba {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     bottom: 0;
-    background-image: url(goomba.png);
+    background-image: url(/images/goomba.png);
+}
+
+.greenturtle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 0;
+    background-image: url(/images/greenturtle.png);
+}
+
+.spiny {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    bottom: 0;
+    background-image: url(images/spiny.png);
+}
+
+.cloud {
+    position: absolute;
+    width: 200px;
+    height:140px;
+    top: 0;
+    background-image: url(images/cloud.png);
+
 }
 
 .game-over {
@@ -46,9 +71,9 @@ body {
 .background {
     position: absolute;
     bottom: 0;
-    background-image: url(background.png);
+    background-image: url(images/background.png);
     background-repeat: repeat-x;
     animation: slideright 660s infinite linear;
     width: 100%;
-    height: 200px;
+    height: 400px;
 }

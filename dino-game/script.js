@@ -48,29 +48,45 @@ function jump() {
 function createCharacter() {
     const enimies = document.createElement('div');
     let characterPosition = 1000;
-    let randomTime = Math.random() * 6000;
-    let persona = Math.floor(Math.random() * 10);
-    //console.log(randomTime); 
-
-    if(persona >= 0 && persona < 4){
-        enimies.classList.add('cactus');
+    let randomTime = Math.random() * 9000;
+    let character = Math.floor(Math.random() * 6);
+    
+    
+    if(character == 1){
+        enimies.classList.add('cactus'); 
+             
     } 
-    if (persona >= 4 ) {
-        enimies.classList.add('goomba');        
+    else if (character == 2) {
+        enimies.classList.add('greenturtle');  
+                 
     }
+    else if(character == 3){
+        enimies.classList.add('goomba');   
+                        
+    }
+    else if(character == 4){
+        enimies.classList.add('spiny');   
+                         
+    }
+    else {
+        enimies.classList.add('cloud');  
+                        
+    }    
 
     enimies.style.left = 1000 + 'px';
     background.appendChild(enimies);
 
     let leftInterval = setInterval(() => {
-
+       
         if (characterPosition < -60) {
             clearInterval(leftInterval);
             background.removeChild(enimies);
-        } else if(characterPosition > 0 && characterPosition < 60 && position < 60){
-            // Game over se encostar no dino
+        } else if(characterPosition > 0 && characterPosition < 60 && position < 60 && enimies.classList.value != 'cloud'){
+            // Game over
             clearInterval(leftInterval);
-            document.body.innerHTML = '<h1 class="game-over">Fim de Jogo</<h1>';
+            document.body.innerHTML = '<h1 class="game-over">Fim de Jogo</<h1>';    
+
+           
         } else {
             characterPosition -= 7;
             enimies.style.left = characterPosition + 'px';
