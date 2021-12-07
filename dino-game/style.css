@@ -5,7 +5,7 @@ body {
 .dino{
     width:  150px;
     height: 150px;
-    background-image: url(/images/dino.png);
+    background-image: url(./images/dino.png);
     position: absolute;
     bottom: 0;    
 }
@@ -15,7 +15,7 @@ body {
     width: 60px;
     height: 60px;
     bottom: 0;
-    background-image: url(/images/cactus.png);
+    background-image: url(./images/cactus.png);
 }
 
 .goomba {
@@ -23,7 +23,7 @@ body {
     width: 80px;
     height: 80px;
     bottom: 0;
-    background-image: url(/images/goomba.png);
+    background-image: url(./images/goomba.png);
 }
 
 .greenturtle {
@@ -31,7 +31,7 @@ body {
     width: 60px;
     height: 60px;
     bottom: 0;
-    background-image: url(/images/greenturtle.png);
+    background-image: url(./images/greenturtle.png);
 }
 
 .spiny {
@@ -39,7 +39,7 @@ body {
     width: 90px;
     height: 90px;
     bottom: 0;
-    background-image: url(images/spiny.png);
+    background-image: url(./images/spiny.png);
 }
 
 .cloud {
@@ -47,7 +47,7 @@ body {
     width: 200px;
     height:140px;
     top: 0;
-    background-image: url(images/cloud.png);
+    background-image: url(./images/cloud.png);
 
 }
 
@@ -71,7 +71,7 @@ body {
 .background {
     position: absolute;
     bottom: 0;
-    background-image: url(images/background.png);
+    background-image: url(./images/background.png);
     background-repeat: repeat-x;
     animation: slideright 660s infinite linear;
     width: 100%;
