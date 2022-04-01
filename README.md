@@ -1,11 +1,11 @@
 
-# DIO
-
-# Repositório de desafios da DIO 👨‍💻️🗂️
+# Desafios amazenados no repositório do Github. 🗂️🚀️ 
 
 ## Desafio github repositório 📥️.
+- utilizando Markdown. ✔️
 
-<<<<<<< HEAD
-## Desafio Dino Game.
-=======
+## Desafio Dino Game. 👨‍💻️🎮️
+- Utilizando Html, Javascript e CSS. 🖼️📜️🧥️
+
+
 
