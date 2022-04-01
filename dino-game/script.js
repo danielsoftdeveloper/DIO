@@ -2,6 +2,7 @@ const dino = document.querySelector('.dino');
 const background = document.querySelector('.background');
 let position = 0;
 let isJumping = false;
+let ponto = 0;
 
 function handleKeyUp(event) {
     if (event.keyCode === 32) {
@@ -37,7 +38,7 @@ function jump() {
 
         } else {
             //jump up
-            position += 50;
+            position += 150;
             dino.style.bottom = position + 'px';
         }
 
@@ -81,10 +82,13 @@ function createCharacter() {
         if (characterPosition < -60) {
             clearInterval(leftInterval);
             background.removeChild(enimies);
+            ponto ++;
         } else if(characterPosition > 0 && characterPosition < 60 && position < 60 && enimies.classList.value != 'cloud'){
             // Game over
             clearInterval(leftInterval);
-            document.body.innerHTML = '<h1 class="game-over">Fim de Jogo</<h1>';    
+            document.body.innerHTML = '<h1 class="game-over">Fim de Jogo</<h1>'; 
+            document.body.innerHTML = '<h2 class="game-over">Pontuação:</<h2> {ponto}'; 
+            document.body.innerHTML = "Pontuação do jogo: " + ponto * 10;  
 
            
         } else {
