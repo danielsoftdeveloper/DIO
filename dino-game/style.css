@@ -1,79 +1,98 @@
 body {
-    background: #fafafa;
-
+  background-color: rgb(30, 152, 209);
 }
-.dino{
-    width:  150px;
-    height: 150px;
-    background-image: url(./images/dino.png);
-    position: absolute;
-    bottom: 0;    
+
+.scoreGame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+}
+
+.button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 12px;
+}
+
+.dino {
+  width: 150px;
+  height: 150px;
+  background-image: url(./images/dino.png);
+  position: absolute;
+  bottom: 0;
 }
 
 .cactus {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    bottom: 0;
-    background-image: url(./images/cactus.png);
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  bottom: 0;
+  background-image: url(./images/cactus.png);
 }
 
 .goomba {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    bottom: 0;
-    background-image: url(./images/goomba.png);
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  bottom: 0;
+  background-image: url(./images/goomba.png);
 }
 
 .greenturtle {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    bottom: 0;
-    background-image: url(./images/greenturtle.png);
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  bottom: 0;
+  background-image: url(./images/greenturtle.png);
 }
 
 .spiny {
-    position: absolute;
-    width: 90px;
-    height: 90px;
-    bottom: 0;
-    background-image: url(./images/spiny.png);
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  bottom: 0;
+  background-image: url(./images/spiny.png);
 }
 
 .cloud {
-    position: absolute;
-    width: 200px;
-    height:140px;
-    top: 0;
-    background-image: url(./images/cloud.png);
-
+  position: absolute;
+  width: 200px;
+  height: 140px;
+  top: 0;
+  background-image: url(./images/cloud.png);
 }
 
 .game-over {
-    text-align: center;
-    color: black;
-    margin-top: 50px;
-    font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: black;
+  margin-top: 50px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 @keyframes slideright {
-    from {
-        background-position: 70000%;
-    }
+  from {
+    background-position: 70000%;
+  }
 
-    to {
-        background-position: 0;
-    }
+  to {
+    background-position: 0;
+  }
 }
 
 .background {
-    position: absolute;
-    bottom: 0;
-    background-image: url(./images/background.png);
-    background-repeat: repeat-x;
-    animation: slideright 660s infinite linear;
-    width: 100%;
-    height: 400px;
+  position: absolute;
+  bottom: 0;
+  background-image: url(./images/background.png);
+  background-repeat: repeat-x;
+  animation: slideright 660s infinite linear;
+  width: 100%;
+  height: 400px;
 }
